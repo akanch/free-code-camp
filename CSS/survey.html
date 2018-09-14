@@ -9,7 +9,10 @@
     #form-description {
 
     }
-    #survery-form {
+    #required {
+
+    }
+    #survey-form {
 
     }
     .question {
@@ -18,11 +21,13 @@
     #name {
       text-transform: capitalize;
     }
+
   </style>
   <head>
     <div id="intro">
       <h1 id="title">Allen's Survey</h1>
       <p id="form-description">How much soccer do you know?</p>
+      <p id="required">* = Required</p>
     <div>
   </head>
   <body>
@@ -30,6 +35,13 @@
       <h3 class="question"> * Name
         <input id="name" type="text" required>
       </h3>
+      <h3 class="question"> * Email
+        <input id="email" type="email" required>
+      </h3>
+      <h3 class="question"> * Age
+        <input id="age" type="number" required>
+      </h3>
+      <button id="submit" type="submit">Submit</button>
     </form>
   </body>
 </html>
