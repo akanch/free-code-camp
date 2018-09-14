@@ -18,6 +18,9 @@
     .question {
 
     }
+    .answer {
+
+    }
     #name {
       text-transform: capitalize;
     }
@@ -26,21 +29,26 @@
   <head>
     <div id="intro">
       <h1 id="title">Allen's Survey</h1>
-      <p id="form-description">How much soccer do you know?</p>
-      <p id="required">* = Required</p>
+      <p id="form-description">Do you know Arsenal?</p>
     <div>
   </head>
   <body>
     <form id="survey-form">
-      <h3 class="question"> * Name
-        <input id="name" type="text" required>
-      </h3>
-      <h3 class="question"> * Email
-        <input id="email" type="email" required>
-      </h3>
-      <h3 class="question"> * Age
-        <input id="age" type="number" required>
-      </h3>
+      <label for="name" id="name-label" class="question">Name</label>
+      <input class="answer" name="name" id="name" placeholder="Fill in your name" type="text" required>
+      <label for="email" id="email-label" class="question">Email</label>
+      <input class="answer" name="email" id="email" placeholder="Fill In Your Email" type="email" required>
+      <label for="number" id="number-label" class="question">Age</label>
+      <input class="answer" name="number" id="number" placeholder="Fill In Your Age" type="number" min="5" max="100" required>
+      <label for="assist" id="assist-label" class="question">Who holds the club record for assists?</label>
+        <input class="answer" name "assist" id="assist" list="players" required>
+        <datalist id="players">
+          <option value="Theirry Henry">
+          <option value="Cesc Fabregas">
+          <option value="Robert Pires">
+          <option value="Dennis Bergkamp">
+          <option value="Mesut Ozil">
+        </datalist>
       <button id="submit" type="submit">Submit</button>
     </form>
   </body>
