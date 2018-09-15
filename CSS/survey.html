@@ -1,55 +1,85 @@
 <html>
   <style>
+    html {
+      background-color: red;
+    }
     #intro {
-
-    }
-    #title {
-
-    }
-    #form-description {
-
-    }
-    #required {
-
+      color: white;
+      text-align: center;
+      padding: 3em;
     }
     #survey-form {
-
+      background-color: rgb(255, 201, 0);
+      padding: 3em 0em 3em 15em;
     }
     .question {
-
+      font-size: 25px;
+      line-height: 3em;
+      padding-right: 2em;
     }
     .answer {
-
+      display: flex;
+      width: 20em;
+      height: 3em;
     }
     #name {
       text-transform: capitalize;
     }
-
+    #seven {
+      padding-top: 3em;
+    }
   </style>
   <head>
     <div id="intro">
       <h1 id="title">Allen's Survey</h1>
-      <p id="form-description">Do you know Arsenal?</p>
-    <div>
+      <p id="description">Do you know Arsenal?</p>
+    </div>
   </head>
   <body>
     <form id="survey-form">
-      <label for="name" id="name-label" class="question">Name</label>
-      <input class="answer" name="name" id="name" placeholder="Fill in your name" type="text" required>
-      <label for="email" id="email-label" class="question">Email</label>
-      <input class="answer" name="email" id="email" placeholder="Fill In Your Email" type="email" required>
-      <label for="number" id="number-label" class="question">Age</label>
-      <input class="answer" name="number" id="number" placeholder="Fill In Your Age" type="number" min="5" max="100" required>
+      <div id="one">
+        <label for="name" id="name-label" class="question">Name</label>
+        <input class="answer" name="name" id="name" placeholder="Fill in your name" type="text" required>
+      </div>
+      <div id="two">
+        <label for="email" id="email-label" class="question">Email</label>
+        <input class="answer" name="email" id="email" placeholder="Fill In Your Email" type="email" required>
+      </div>
+      <div id="three">
+        <label for="number" id="number-label" class="question">Age</label>
+        <input class="answer" name="number" id="number" placeholder="Fill In Your Age" type="number" min="5" max="100" required>
+      </div>
+      <div id="four">
       <label for="assist" id="assist-label" class="question">Who holds the club record for assists?</label>
-        <input class="answer" name "assist" id="assist" list="players" required>
-        <datalist id="players">
-          <option value="Theirry Henry">
-          <option value="Cesc Fabregas">
-          <option value="Robert Pires">
-          <option value="Dennis Bergkamp">
-          <option value="Mesut Ozil">
-        </datalist>
-      <button id="submit" type="submit">Submit</button>
+        <select class="answer" name="assist" id="assist" required>
+          <option value="fabregas">Cesc Fabregas</option>
+          <option value="henry">Theirry Henry</option>
+          <option value="pires">Robert Pires</option>
+          <option value="bergkamp">Dennis Bergkamp</option>
+          <option value="ozil">Mesut Ozil</option>
+        </select>
+      </div>
+      <div id="five">
+        <label for="place" id="place-label" class="question">Which place did Arsenal end up last season?</label><br>
+        <input type="radio" class="choice-answer" name="place" value="first-radio" checked>First<br>
+        <input type="radio" class="choice-answer" name="place" value="second-radio">Second<br>
+        <input type="radio" class="choice-answer" name="place" value="third-radio">Third<br>
+        <input type="radio" class="choice-answer" name="place" value="fourth-radio">Fourth<br>
+        <input type="radio" class="choice-answer" name="place" value="fifth-radio">Fifth<br>
+        <input type="radio" class="choice-answer" name="place" value="sixth-radio">Sixth<br>
+      </div>
+      <div id="six">
+        <label for="ex-players" id="ex-players-label"class="question">Select the players that have played for Arsenal:"</label><br>
+        <input type="checkbox" class="choice-answer" name="ex-players" value="first-check">William Gallas<br>
+        <input type="checkbox" class="choice-answer" name="ex-players" value="second-check">Ray Parlour<br>
+        <input type="checkbox" class="choice-answer" name="ex-players" value="third-check">Kolo Toure<br>
+        <input type="checkbox" class="choice-answer" name="ex-players" value="fourth-check">Benayoun<br>
+        <input type="checkbox" class="choice-answer" name="ex-players" value="fifth-check">Alan Smith<br>
+        <input type="checkbox" class="choice-answer" name="ex-players" value="sixth-check">Fernandinho<br>
+      </div>
+      <div id="seven">
+        <button id="submit" type="submit">Submit</button>
+      </div>
     </form>
   </body>
 </html>
